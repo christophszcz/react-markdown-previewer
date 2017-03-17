@@ -1,10 +1,24 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
 
 var Input = React.createClass({
-	render: function () {
-		return;
-	}
+	getInitialState : function(){
+    return {
+      userInput : "" 
+     };
+  },
+	handleUserInput : function(e){
+    this.setState({
+    	userInput : e.target.value
+    });
+  },
+  render: function () {
+    return (
+      <div>
+        <input value={this.state.userInput} onChange={this.handleUserInput} type="text"/>
+        <h1>{this.state.userInput}</h1>
+      </div>
+    );
+  }
 });
 
 module.exports = Input;
