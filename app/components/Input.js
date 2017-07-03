@@ -1,4 +1,15 @@
 var React = require('react');
+var marked = require('marked');
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: false,
+  smartLists: true,
+  smartypants: false
+});
 
 var Input = React.createClass({
 	getInitialState : function(){
@@ -15,7 +26,7 @@ var Input = React.createClass({
     return (
       <div>
         <input value={this.state.userInput} onChange={this.handleUserInput} type="text"/>
-        <h1>{this.state.userInput}</h1>
+        {marked(this.state.userInput)}
       </div>
     );
   }
