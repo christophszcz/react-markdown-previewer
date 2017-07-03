@@ -25,7 +25,8 @@ var Input = React.createClass({
   render: function () {
     return (
       <div>
-        <input value={this.state.userInput} onChange={this.handleUserInput} type="text"/>
+        <textarea value={this.state.userInput} onChange={this.handleUserInput} rows="4" cols="50">
+        </textarea>
         {marked(this.state.userInput)}
       </div>
     );

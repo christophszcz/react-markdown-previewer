@@ -19782,7 +19782,7 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement('input', { value: this.state.userInput, onChange: this.handleUserInput, type: 'text' }),
+	      React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput }),
 	      marked(this.state.userInput)
 	    );
 	  }
