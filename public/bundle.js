@@ -19782,8 +19782,16 @@
 	    return React.createElement(
 	      'div',
 	      null,
-	      React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput }),
-	      marked(this.state.userInput)
+	      React.createElement(
+	        'div',
+	        { 'class': 'col-6-md', id: 'left' },
+	        React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput, rows: '4', cols: '50' })
+	      ),
+	      React.createElement(
+	        'div',
+	        { 'class': 'col-6-md', id: 'right' },
+	        marked(this.state.userInput)
+	      )
 	    );
 	  }
 	});
