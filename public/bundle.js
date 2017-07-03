@@ -19781,16 +19781,20 @@
 	  render: function render() {
 	    return React.createElement(
 	      'div',
-	      null,
+	      { className: 'container' },
 	      React.createElement(
 	        'div',
-	        { className: 'col-6-md', id: 'left' },
-	        React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput, rows: '4', cols: '50' })
-	      ),
-	      React.createElement(
-	        'div',
-	        { className: 'col-6-md', id: 'right' },
-	        marked(this.state.userInput)
+	        { className: 'row' },
+	        React.createElement(
+	          'div',
+	          { className: 'col-md-6', id: 'left' },
+	          React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput, rows: '4', cols: '50', style: { height: '400px', width: '100%' } })
+	        ),
+	        React.createElement(
+	          'div',
+	          { className: 'col-md-6', id: 'right' },
+	          marked(this.state.userInput)
+	        )
 	      )
 	    );
 	  }

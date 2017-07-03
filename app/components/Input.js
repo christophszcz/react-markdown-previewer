@@ -25,13 +25,14 @@ var Input = React.createClass({
   render: function () {
     return (
       <div className="container">
-        <div className="row"></div>
-        <div className="col-6-md" id="left">
-          <textarea value={this.state.userInput} onChange={this.handleUserInput} rows="4" cols="50">
-          </textarea>
-        </div>
-        <div className="col-6-md" id="right">
-          {marked(this.state.userInput)}
+        <div className="row">
+          <div className="col-md-6" id="left">
+            <textarea value={this.state.userInput} onChange={this.handleUserInput} rows="4" cols="50" style={{height: '400px', width: '100%'}}>
+            </textarea>
+          </div>
+          <div className="col-md-6" id="right">
+            {marked(this.state.userInput)}
+          </div>
         </div>
       </div>
     );
