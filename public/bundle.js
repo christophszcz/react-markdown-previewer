@@ -19784,12 +19784,12 @@
 	      null,
 	      React.createElement(
 	        'div',
-	        { 'class': 'col-6-md', id: 'left' },
+	        { className: 'col-6-md', id: 'left' },
 	        React.createElement('textarea', { value: this.state.userInput, onChange: this.handleUserInput, rows: '4', cols: '50' })
 	      ),
 	      React.createElement(
 	        'div',
-	        { 'class': 'col-6-md', id: 'right' },
+	        { className: 'col-6-md', id: 'right' },
 	        marked(this.state.userInput)
 	      )
 	    );
