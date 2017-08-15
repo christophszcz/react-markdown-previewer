@@ -34,6 +34,7 @@ var Input = React.createClass({
           <div className="col-md-6" id="right">
             {marked(this.state.userInput)}
           </div>
+          <button type="button" className="btn btn-danger">Test</button>
         </div>
       </div>
     );
